@@ -1,0 +1,38 @@
+.cointener{
+    background-image: url('./conteiner1.jpg');
+    background-position-y: center center;
+    background-size: cover;
+    height:97vh;
+    color:rgba(49, 48, 48, 0.603);
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    order: 6;
+}
+
+.paginado{
+    position: relative;
+    justify-content: center;
+    margin-bottom: 10px;
+    height: 3em;
+}
+
+.navigation{
+display: flex;
+justify-content: center;
+position: relative;
+justify-content: space-between;
+align-items: center;
+height: 2em;
+}
+
+.cards{
+background-color: rgba(191, 245, 245, 0.164);
+position: relative;
+display: flex;
+align-items: flex-start;
+justify-content: space-between width and height;
+padding: .5rem;
+border: 2px solid rgba(223, 223, 243, 0.281);
+}
+
