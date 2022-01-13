@@ -21,8 +21,9 @@ function rootReducer(state = initialState, action) {
 
         case FILTER_BY_REGION: // filtrar por Continente
             const allCountries = state.allCountries
-            const statusFiltered = (action.payload === "All" || action.payload === "Continente") ?
-             allCountries : allCountries.filter(country => country.region === action.payload)
+            const statusFiltered = (action.payload === "All") ?
+             allCountries : allCountries.filter(el => el.continent === action.payload)
+             console.log(action.payload)
             return {
                 ...state,
                 countries: statusFiltered

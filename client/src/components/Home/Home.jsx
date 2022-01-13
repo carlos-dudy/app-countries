@@ -72,13 +72,12 @@ export default function Home() {
 
            
                 <select className={Styles.select} onChange={e => handleFilterByRegion(e)}>
-                    <option value='Continente'>Continente</option>
+                    <option value='All'>Continente</option>
                     <option value='Oceania'>Oceania</option>
                     <option value='Americas'>America</option>
                     <option value='Africa'>Africa</option>
                     <option value='Asia'>Asia</option>
                     <option value='Europe'>Europa</option>
-                    <option value='All'>All</option>
                 </select>
             
             <select className={Styles.select} onChange={e => handleSort(e)}>
