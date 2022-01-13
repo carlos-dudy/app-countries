@@ -6,12 +6,12 @@ export default function Landing() {
     return (
         <div className={Styles.landing}>
             <div className={Styles.title}>
-                <h1>Mi COUNTRIES APP </h1>
+                <h1>MY COUNTRIES APP </h1>
             </div>
 
             <div className={Styles.botton}>
-                <Link to='/countries'>
-                    <button>Ingresar</button>
+                <Link  to='/countries'>
+                    <button className={Styles.bnt}>Ingresar</button>
                 </Link>
             </div>
         </div>

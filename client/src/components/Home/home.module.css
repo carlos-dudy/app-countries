@@ -1,22 +1,54 @@
 .cointener{
-    background-image: url('./conteiner1.jpg');
+    /* background-color: rgb(42, 165, 159); */
+    background-image: url('./andrew-neel-1-29wyvvLJA-unsplash.jpg');
     background-position-y: center center;
     background-size: cover;
-    height:97vh;
     color:rgba(49, 48, 48, 0.603);
+}
+.nav{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: bold;
+    background-color: black;
     display: flex; 
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     order: 6;
+    padding:20px;
+    margin-bottom: 15px;
 }
-
-.paginado{
-    position: relative;
+.select{
+    display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    height: 3em;
+    align-items:center;
+    text-align: center;
+    width:150px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2.5px solid white;
 }
+.recarga{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.refresh{
+    background-color: transparent;
+    color: white;
+    border:none;
+    font-size: 25px;
 
+}
+.paginado{
+    display: flex;
+    justify-content: center;
+}
+.imgNav{
+    height:40px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
 .navigation{
 display: flex;
 justify-content: center;
@@ -25,14 +57,32 @@ justify-content: space-between;
 align-items: center;
 height: 2em;
 }
+.toActivity{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    width:150px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2.5px solid white;
 
-.cards{
-background-color: rgba(191, 245, 245, 0.164);
-position: relative;
-display: flex;
-align-items: flex-start;
-justify-content: space-between width and height;
-padding: .5rem;
-border: 2px solid rgba(223, 223, 243, 0.281);
+}
+.act{
+    background-color: transparent;
+    color: white;
+    border:none;
+
+}
+
+.allCards{
+    padding-left:10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 

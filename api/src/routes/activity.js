@@ -1,54 +1,39 @@
+const { Router } = require("express");
+const { Activity, Country } = require("../db.js");
 
-const { Country, Activity } = require('../db.js');
-const { Router } = require('express');
-const { Op } = require('sequelize')
+const router = Router();
 
+router.post("/", async (req, res) => {
+  const { name, difficulty, duration, season, countries } = req.body;
 
-const router = Router()
-
-router.post('/',async(req,res,next)=>{
-    
-try{
-    const{name,dificulty,duration,season,countryId}=req.body;
-    let postActivity = await Activity.findOrCreate({
-        where: {
-            name: name,
-            dificulty: dificulty,
-            duration: duration,
-            season: season
-        },
-       
+  try {
+    const [activity] = await Activity.findOrCreate({
+      where: {
+        name,
+        difficulty,
+        duration,
+        season,
+      },
     });
-        for(let i=0; i<countryId.length; i++){
-        const match = await Country.findOne({
-            where:{
-                id: countryId[i]
-            }
-        })
-        //console.log("POST ACTIVITY",postActivity)
-        await postActivity.addCountry(match); //pemrite hacer la relacion 
-        //console.log("post con country", postActivity)
-    }
-   
-    res.json(postActivity)
-    
-}catch(error){
-    next(error)
-}
+
+    await activity.addCountries(countries);
+
+    res.status(200).json("Activity created");
+  } catch (err) {
+    console.log(err);
+  }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    let activities = await Activity.findAll();
+    res.json(activities);
+  } catch (err) {
+    console.log(err);
+  }
+});
 
-//traer todas las actividades
-router.get("/", async (req, res, next) => {
-    try {
-        const activities = await Activity.findAll({
-            include: Country
-        });
-        return res.json(activities)
-    } catch (err) {
-        return next(err);
-    }
-})
+module.exports = router;
 
 //Modificar una actividad
 router.put("/", async (req, res, next) => {

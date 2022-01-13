@@ -95,7 +95,7 @@ export default function Activity() {
         <form className={Styles.Todo} onSubmit={e => { handleSubmit(e) }}>
         <section className={Styles.name}>
             {/* link a pagina principal */}
-            <Link to='/home'><button className={Styles.Button} >Volver A Paises</button></Link>
+            <Link to='/countries'><button className={Styles.Button} >Volver A Paises</button></Link>
             <h1>Crea la actividad turistica</h1>
             
             <div className={Styles.Name}>

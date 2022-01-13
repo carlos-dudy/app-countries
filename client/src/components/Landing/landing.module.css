@@ -7,17 +7,23 @@
 
 .title{
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content:flex-end;
+  padding-right: 20px;
   background-color: rgba(173, 171, 169, 0.075);
   color: white;
 }
 
 .botton{
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  
-
+  justify-content:flex-end;
+  padding-right: 20px;
+  padding-top: 10px;
 }
-
+.bnt{
+  border: 2.5px solid white;
+  color: white;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+}
