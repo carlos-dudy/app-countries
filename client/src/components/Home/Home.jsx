@@ -61,16 +61,16 @@ export default function Home() {
         <div className={Styles.cointener}>
             <div className={Styles.nav}>
                 <Link to='/'>
-            <img className={Styles.imgNav} src={Wold} alt='img'/>
-            </Link>
-            <SearchCountry />
-            <select className={Styles.select} onChange={(e) => { handleSortPopulation(e) }}>
-                <option value='Pobla'>Poblacion</option>
-                <option value='ASC'>Ascendente</option>
-                <option value='DES'>Descendente</option>
-            </select>
+                    <img className={Styles.imgNav} src={Wold} alt='img' />
+                </Link>
+                <SearchCountry />
+                <select className={Styles.select} onChange={(e) => { handleSortPopulation(e) }}>
+                    <option value='Pobla'>Poblacion</option>
+                    <option value='ASC'>Ascendente</option>
+                    <option value='DES'>Descendente</option>
+                </select>
 
-           
+
                 <select className={Styles.select} onChange={e => handleFilterByRegion(e)}>
                     <option value='All'>Continente</option>
                     <option value='Oceania'>Oceania</option>
@@ -79,22 +79,22 @@ export default function Home() {
                     <option value='Asia'>Asia</option>
                     <option value='Europe'>Europa</option>
                 </select>
-            
-            <select className={Styles.select} onChange={e => handleSort(e)}>
-                <option value='Orden'>Orden Alfabetico</option>
-                <option value='A-Z'>A-Z</option>
-                <option value='Z-A'>Z-A</option>
-            </select>
-           
-                <div className={Styles.recarga}> 
-                <button className={Styles.refresh} onClick={handleClick}>
-                   <FiRefreshCw/>
-                </button>
+
+                <select className={Styles.select} onChange={e => handleSort(e)}>
+                    <option value='Orden'>Orden Alfabetico</option>
+                    <option value='A-Z'>A-Z</option>
+                    <option value='Z-A'>Z-A</option>
+                </select>
+
+                <div className={Styles.recarga}>
+                    <button className={Styles.refresh} onClick={handleClick}>
+                        <FiRefreshCw />
+                    </button>
                 </div>
                 <div className={Styles.toActivity}>
-                <Link to='/activity'><button className={Styles.act} >Crear Actividad a Paises</button></Link>
+                    <Link to='/activity'><button className={Styles.act} >Crear Actividad a Paises</button></Link>
                 </div>
-            
+
             </div>
             <div className={Styles.cards}>
                 <div className={Styles.allCards}>
@@ -107,14 +107,7 @@ export default function Home() {
                     })}
                 </div>
             </div>
-            {/* <CountryDetail/> */}
-
-            {/* <div className={Styles.sectionCountries}>
-                      {currentCountries ? currentCountries.map(c => {
-                                return <CountryDetail key={c.id} country={c} />
-                            }) :<p>No existen paises</p>}
-                    </div> */}
-
+          
 
             <Paginado className={Styles.paginado}
                 countriesPage={countriesPage}

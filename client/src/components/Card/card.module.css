@@ -17,7 +17,8 @@
     display: flex;
     align-items:center;
     justify-content: center;
-    width:245px ;
+
+    width:230px ;
     margin: -0.5px;
 }
 .region{

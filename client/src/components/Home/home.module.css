@@ -39,6 +39,9 @@
     font-size: 25px;
 
 }
+.select .option{
+    background-color: red;
+}
 .paginado{
     display: flex;
     justify-content: center;

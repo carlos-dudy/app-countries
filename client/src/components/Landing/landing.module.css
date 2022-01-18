@@ -27,3 +27,8 @@
   color: white;
   font-size: 25px;
 }
+.bnt:hover{
+  border-color:rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color:black;
+}

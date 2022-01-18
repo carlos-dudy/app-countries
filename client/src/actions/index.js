@@ -8,7 +8,7 @@ import axios from 'axios';
 // traer paises de la base de DB
 export function getCountries() {
     return async function (dispatch) {
-        var countries = await axios.get('http://localhost:3001/countries');
+        const countries = await axios.get('http://localhost:3001/countries');
         return dispatch({
             type: GET_COUNTRIES,
             payload: countries.data
@@ -28,7 +28,7 @@ export function filterByRegion(payload) {
 export function getCountryByName(name) {
     return async function (dispatch) {
         try { 
-            let countries = await axios.get('http://localhost:3001/countries?name=' + name);
+            const countries = await axios.get('http://localhost:3001/countries?name=' + name);
             return dispatch({
                 type: GET_COUNTRY_BY_NAME,
                 payload: countries.data
@@ -40,9 +40,11 @@ export function getCountryByName(name) {
 }
 
 
-export function getCountryById(idCountry){
+export function getCountryById(id){
+    console.log(id, "ACTIONS")
     return async function(dispatch){
-        let country = await axios.get(`http://localhost:3001/countries/${idCountry}`)
+        let country = await axios.get(`http://localhost:3001/countries/${id}`)
+        console.log(country)
         return dispatch({
             type:GET_COUNTRY_BY_ID,
              payload:country.data})

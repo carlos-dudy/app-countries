@@ -1,0 +1,44 @@
+.container{
+    background-image: url("../Imagenes/stephen-monroe-yg8Cz-i5U30-unsplash.jpg");
+    background-position-y: center center;
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    color:rgba(0, 0, 0, 0.726);
+}
+.nav{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: bold;
+    background-color: black;
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order: 3;
+    padding:20px 15px 0px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(255, 0, 0)
+}
+.wold{
+    border: 1px solid white
+}
+.imgNav{
+    height:75px;
+}
+
+.title{
+    color:white;
+    border: 1px solid white;
+}
+.info{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.gridIzq{
+    border: 5px solid red;
+}
+.flag{
+  max-width: 80%;  
+}

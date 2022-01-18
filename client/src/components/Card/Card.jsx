@@ -1,7 +1,7 @@
 import React from "react";
 import a from './card.module.css'
 
-export default function Card ({name, region, img}) {
+export default function Card ({name, region, img }) {
     return (
         <div className={a.allCard}>
         <div className={a.card}>

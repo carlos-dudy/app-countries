@@ -17,13 +17,15 @@ export default function SearchCountry(){
     function hadleSumit(e){
         e.preventDefault()
         dispatch(getCountryByName(name))
+        setName("")
     }
 
     return (
         <div className={Styles.searchBar}>
         <input className={Styles.input}
         type = "text"
-        placeholder = "Buscar..."
+        placeholder="Buscar País"
+        value={name}
         onChange={e => hadleInputChange(e)}
         />
         <button className={Styles.btn} type ="submit" onClick={(e) => hadleSumit(e)}><FiSearch/></button>
