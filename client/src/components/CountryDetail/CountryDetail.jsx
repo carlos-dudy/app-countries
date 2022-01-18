@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 import { Link } from "react-router-dom"
 import a from './countrydetail.module.css'
 import Wold from '../Imagenes/woldNav.jpg'
@@ -11,10 +11,11 @@ export default function CountryDetail() {
     const [state, setState] = useState({});
     const info = useSelector(store => store.countryDetail);
     const {id} = useParams();
- console.log(id, "Id del pais")
+    const history = useHistory()
+
 
  const getDetails = () => {
-    if (Object.keys(state).length === 0) dispatch( getCountryById(id))
+    if (Object.keys(state).length === 0) dispatch(getCountryById(id))
 }
 
 useEffect(() => {
@@ -22,21 +23,32 @@ useEffect(() => {
     return () => { 
     setState({})}
 }, [])
+
+ function handleClick(e){
+    e.preventDefault()
+     history.push('/countries')
+     setState({})
+ }
     return (
         <div className={a.container}>
         <div className={a.nav}>
-            <div className={a.wold}>
-                
-                <Link   to='/countries'>
+        
+                <button className={a.woldNav} onClick={handleClick}>
                     <img className={a.imgNav} src={Wold} alt='img' />
-                </Link>
-            
-                </div>
+                </button>
+    
+               
 
                 <div className={a.title}>
-                    <h1>Mas info de {info.name}</h1>
+                    <p className={a.titleName}> Mas info de {info.name}</p>
                 </div>
+                <div className={a.toActivity}>
+                    <Link to='/activity'><button className={a.act} >Crear Actividad a Paises</button></Link>
+                </div>
+
+          
         </div>
+
         <div className={a.info}>
         <div className={a.gridIzq}>
         <div>

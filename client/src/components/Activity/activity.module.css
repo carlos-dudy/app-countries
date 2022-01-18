@@ -1,8 +1,79 @@
-.Todo{
-
+.container{
     background-image: url('../Home/conteiner1.jpg');
     background-position-y: center center;
     background-size: cover;
     height:100vh;
-  
+
+}
+
+.nav{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: bold;
+    background-color: black;
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:20px;
+    margin-bottom: 15px;
+}
+.woldNav{
+    border:none;
+    background-color: transparent;
+}
+
+.imgNav{
+    height:40px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    padding: 0;
+    margin: 0;
+}
+
+.titleName{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.containerFormulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.formulario{ 
+    background-color: rgba(0, 0, 0, 0.507);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+
+}
+.For{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 430px;
+}
+.name{
+   border: 2px solid white;
+   margin: 10px;
+}
+.input{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 15px;
 }

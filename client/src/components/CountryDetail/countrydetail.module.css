@@ -13,21 +13,55 @@
     display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
-    order: 3;
-    padding:20px 15px 0px;
+    padding:20px;
     margin-bottom: 15px;
-    border: 1px solid rgb(255, 0, 0)
 }
-.wold{
-    border: 1px solid white
+.woldNav{
+    border:none;
+    background-color: transparent;
 }
+
 .imgNav{
-    height:75px;
+    height:40px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 .title{
-    color:white;
-    border: 1px solid white;
+    padding: 0;
+    margin: 0;
+}
+
+.titleName{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.toActivity{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    width:150px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2.5px solid white;
+
+}
+.act{
+    background-color: transparent;
+    color: white;
+    border:none;
 }
 .info{
 display: grid;
@@ -37,8 +71,44 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 .gridIzq{
-    border: 5px solid red;
+    max-width: 80%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gridDer{
+    min-width: 80%;
+    max-width: 80%;
+    /* position: absolute; */
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    left: 650px;
+    border: solid 1px white;
+    border-radius:5px;
+    color:rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.507);
 }
 .flag{
   max-width: 80%;  
+  border-radius: 10px;
+}
+.toActivity{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    width:150px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2.5px solid white;
+
+}
+.act{
+    background-color: transparent;
+    color: white;
+    border:none;
+
 }
